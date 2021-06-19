@@ -3,6 +3,10 @@ module.exports = {
         "../src/**/*.stories.mdx",
         "../src/**/*.stories.@(js|jsx|ts|tsx)",
     ],
+    // workaround docgen crash according to https://github.com/styleguidist/react-docgen-typescript/issues/356
+    typescript: {
+        reactDocgen: "none",
+    },
     addons: [
         "@storybook/addon-links",
         "@storybook/addon-essentials",
